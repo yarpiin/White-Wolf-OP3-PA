@@ -20,6 +20,7 @@ obj-$(CONFIG_IOSCHED_DEADLINE)	+= deadline-iosched.o
 obj-$(CONFIG_IOSCHED_CFQ)	+= cfq-iosched.o
 obj-$(CONFIG_IOSCHED_TEST)	+= test-iosched.o
 obj-$(CONFIG_IOSCHED_FIOPS)	+= fiops-iosched.o
+obj-$(CONFIG_IOSCHED_SWITCHER) += iosched_switcher.o
 obj-$(CONFIG_IOSCHED_SIO)	+= sio-iosched.o
 obj-$(CONFIG_IOSCHED_SIOPLUS)	+= sioplus-iosched.o
 obj-$(CONFIG_IOSCHED_TRIPNDROID)+= tripndroid-iosched.o
