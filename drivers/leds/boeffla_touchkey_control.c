@@ -194,7 +194,7 @@ int btkc_led_set(int val)
 
 static ssize_t btkc_mode_show(struct device *dev, struct device_attribute *attr, char *buf)
 {
-	return sprintf(buf, "Mode: %d\n", btkc_mode);
+	return sprintf(buf, "%d\n", btkc_mode);
 }
 
 
@@ -225,7 +225,7 @@ static ssize_t btkc_mode_store(struct device *dev, struct device_attribute *attr
 
 static ssize_t btkc_timeout_show(struct device *dev, struct device_attribute *attr, char *buf)
 {
-	return sprintf(buf, "Timeout [s]: %d\n", btkc_timeout);
+	return sprintf(buf, "%d\n", btkc_timeout);
 }
 
 
