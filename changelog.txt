@@ -1,6 +1,19 @@
 
 Project name: White-Wolf-OP3-PA
 
+
+06/06/2017
+
+  * yarpiin_defconfig: enable BFQ iosched (Slawek) [86b37b4]
+  * BFQ: Port BFQ-v8r10 to Android 3.18 kernel (Paolo Valente) [d049eaa]
+  * cpufreq: cpu-boost: don't boost if input_boost_ms is <= 0 (Francisco Franco) [53e6bf7]
+  * cpufreq: cpu-boost: export input_boost_enable to userspace (franciscofranco) [5573139]
+  * yarpiin_defconfig: enable Boeffla Touchkey control and adapt to UKM (Slawek) [4d15df1]
+  * leds: Fix Boeffla touchkey control driver breaking LPM mode (charging when device is off) (andip71) [d443b732]
+  * leds: Boeffla touchkey control driver 1.2.0 for OnePlus3/OnePlus2 (andip71) [f4c3d55]
+  * leds: Boeffla touchkey control driver 1.1.0 for OnePlus3/OnePlus2 (AndiP) [2da960a]
+  * Revert "cpu-boost: Implement Two-Step input boost" (Alex Naidis) [4e7443c]
+  
 02/06/2017
 
 
