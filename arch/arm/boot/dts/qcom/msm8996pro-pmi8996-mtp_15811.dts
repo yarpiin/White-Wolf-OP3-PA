@@ -43,8 +43,3 @@
 &pil_gpu {
 	qcom,firmware-name = "a530_zap-pro";
 };
-
-&mtp_batterydata {
-	qcom,max-voltage-uv = <4370000>;
-	qcom,v-cutoff-uv = <3300000>;
-};
