@@ -1,6 +1,28 @@
 
 Project name: White-Wolf-OP3-PA
 
+13/06/2017
+
+  * cpufreq: fp-boost: Change pr_info to pr_debug of Boosting/Unboosting (jollaman999) [66508d7]
+  * PM / devfreq: Reduce wake boost duration to 5000 ms (Sultanxda) [5b941c6]
+  * ARM: dts: 15811: Fix incorrect max voltage and cutoff voltage (sultanxda) [95a2c05]
+  * ARM: dts: 15801/15811: Add various OnePlus changes (sultanxda) [d216015]
+  * msm: qpnp-haptic: Use a high-priority workqueue for haptics (Sultanxda) [897e43b]
+  * qpnp-haptic: improve vibrator intensity sysfs interface (dianlujitao) [b314d91]
+  * qpnp-haptic: Add sysfs interface to control intensity (Willi Ye) [cf240dd]
+  * yarpiin_defconfig: enable fingerprint boost (Slawek) [c745430]
+  * cpufreq: Introduce fingerprint boost driver (Joe Maples) [ca895a4]
+  * PM / devfreq: Boost "624000.ufshc" and "soc:qcom,cpubw" on screen wake (Sultanxda) [49fc53a]
+  * PM / devfreq: Add an interface to boost devices when the screen is woken (Sultanxda) [8480d90]
+  * iosched_switcher: Use power efficient workqueues (Joe Maples) [5c08804]
+  * state_notifier: Reduce defer on suspend call to 1 second (Joe Maples) [ebfc46e]
+  * state_notifier: Queue work on any core (Joe Maples) [6469308]
+  * block: I/O scheduler driver mod. delay setting noop when screen goes off. (Dorimanx) [1beef29]
+  * kernel: Fix potential refcount leak in su check (Tom Marshall) [bb3808b]
+  * kernel: Only expose su when daemon is running (Tom Marshall) [4440990]
+  * display: add a simple api to query the display state (on/off) at any point in time (franciscofranco) [e8e35de]
+  * Revert "display: add a simple api to query the display state (on/off) at any point in time" (Francisco Franco) [cf232f6]
+
 
 06/06/2017
 
