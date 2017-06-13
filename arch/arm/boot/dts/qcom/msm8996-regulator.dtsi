@@ -275,7 +275,6 @@
 			status = "okay";
 		};
 
-#if 0
 		pm8994_l18_pin_ctrl: regulator-l18-pin-ctrl {
 			compatible = "qcom,rpm-smd-regulator";
 			regulator-name = "pm8994_l18_pin_ctrl";
@@ -289,7 +288,6 @@
 			 */
 			qcom,enable-with-pin-ctrl = <0 4>;
 		};
-#endif
 	};
 
 	rpm-regulator-ldoa19 {
