@@ -1,6 +1,42 @@
 
 Project name: White-Wolf-OP3-PA
 
+11/07/2017
+
+
+  * Revert "ARM: dts: 15811: Fix incorrect max voltage and cutoff voltage" (sultanxda) [514e875]
+  * Revert "ARM: dts: 15801/15811: Add various OnePlus changes" (sultanxda) [9aced66]
+  * Revert "PM / sleep: Handle failures in device_suspend_late() consistently" (Alex Naidis) [0e73fea]
+  * Revert "PM / Runtime: Fix error path in pm_runtime_force_resume()" (Alex Naidis) [7e4d68d]
+  * mm: numa: avoid waiting on freed migrated pages (Mark Rutland) [9d52484]
+  * usb: gadget: f_mass_storage: Serialize wake and sleep execution (Thinh Nguyen) [d3554a7]
+  * usb: gadget: f_fs: avoid out of bounds access on comp_desc (William Wu) [8a2cd8e]
+  * ANDROID: sched: rt: Avoid preempting CPUs if softirq explicity disable (Joel Fernandes) [1e72fc2]
+  * ANDROID: Fix cpufreq stats table creation (Andres Oportus) [351fa1b]
+  * DTS: Enable wakeup events for the volume keys (Sultanxda) [d54bb46]
+  * cpufreq: stats: Remove unreachable Oneplus code (Alex Naidis) [1efb9eb]
+  * cpufreq: stats: Fix early return in cpufreq_stats_update_policy_cpu (Alex Naidis) [16d92e7]
+  * ANDROID: sdcardfs: remove dead function open_flags_to_access_mode() (Greg Hackmann) [7bcf89c]
+  * sdcardfs: Change magic value (Daniel Rosenberg) [efd0649]
+  * proc: Remove additional SafetyNet flags from /proc/cmdline (Sultanxda) [0a1128f]
+  * proc: Remove verifiedbootstate flag from /proc/cmdline (Sultanxda) [5771610]
+  * Revert "proc: Set androidboot.verifiedbootstate=green" (Alex Naidis) [b2dcb38]
+  * ARM: dts: msm: Rework and unify msm-thermal setup (Alex Naidis) [c562183]
+  * memshare: Fix possible memory leak (Manoj Prabhu B) [eca7c90]
+  * qcacld-2.0: Configure FW not to wakeup APPS for RRM action frame (Srinivas Girigowda) [b9638b0]
+  * qcacld-2.0: Don't send WoW indication twice to FW (Subhani Shaik) [3449be4]
+  * qcacld-2.0: Fix memory leak issue (Srinivas Girigowda) [1e9a4dc]
+  * defconfig: Disable HSL_CONSOLE (Alex Naidis) [e72fdba]
+  * lib/cmdline.c: fix get_options() overflow while parsing ranges (Ilya Matveychikov) [664e849]
+  * fs/exec.c: account for argv/envp pointers (Kees Cook) [f8ade41]
+  * alarmtimer: Rate limit periodic intervals (Thomas Gleixner) [7c3155b]
+  * genirq: Release resources in __setup_irq() error path (Heiner Kallweit) [e11abbe]
+  * swap: cond_resched in swap_cgroup_prepare() (Yu Zhao) [fba93d4]
+  * log2: make order_base_2() behave correctly on const input value zero (Ard Biesheuvel) [4cf4aab]
+  * qcacld-2.0: update to LA.UM.5.6.r1-05100-89xx.0 (Jake Weinstein) [ba12a51]
+
+
+
 13/06/2017
 
   * cpufreq: fp-boost: Change pr_info to pr_debug of Boosting/Unboosting (jollaman999) [66508d7]
