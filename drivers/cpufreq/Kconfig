@@ -155,6 +155,15 @@ config CPU_FREQ_DEFAULT_GOV_RELAXED
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the interactive governor.
 
+config CPU_FREQ_DEFAULT_GOV_ELECTRON
+	bool "electron"
+	select CPU_FREQ_GOV_ELECTRON
+	help
+	  Use the CPUFreq governor 'electron' as default. This allows
+	  you to get a full dynamic cpu frequency capable system by simply
+	  loading your cpufreq low-level hardware driver, using the
+	  'electron' governor for latency-sensitive workloads.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -283,6 +292,12 @@ config CPU_FREQ_GOV_DESPAIR
 	select CPU_FREQ_GOV_COMMON
     help
         If in doubt, say N.
+
+config CPU_FREQ_GOV_ELECTRON
+	tristate "'electron' cpufreq governor"
+	depends on CPU_FREQ
+	help
+	  'electron' - another tuned interactive with extra options
 
 config CPUFREQ_DT
 	tristate "Generic DT based cpufreq driver"
