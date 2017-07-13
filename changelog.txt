@@ -1,6 +1,24 @@
 
 Project name: White-Wolf-OP3-PA
 
+
+13/07/2017
+
+  * yarpiin_defconfig: enable Electron gov (Slawek) [15c7aeb]
+  * cpufreq: Add Electron governor (Joe Maples) [838a34e]
+  * cpufreq: interactive: add display state for screen off max frequency tunable (Slawek) [b60c82d]
+  * cpufreq: interactive: add screen off max frequency tunable (imoseyon) [3f28324]
+  * cpufreq: interactive: add powersave bias tunable (Joe Maples) [78c459d]
+  * CHROMIUM: cpufreq: interactive: calculate load before freq change (franciscofranco) [1c60d8d]
+  * cpufreq: interactive: remove hispeed_freq init restriction (Francisco Franco) [4d18b84]
+  * workqueue: Remove config guard for power_efficient (Joe Maples) [d1ae225]
+  * Stable GPU Overclock @652Mhz (whyorean) [ce1b4dc]
+  * PM / devfreq: Add proper locking around list_del() (Axel Lin) [e5e38af]
+  * PM / devfreq: Restart previous governor if new governor fails to start (Saravana Kannan) [acbe8ef]
+  * sg: Fix double-free when drives detach during SG_IO (Calvin Owens) [0174cc3]
+  * Optimize copy_page for modern ARM platforms (Harm Hanemaaijer) [8c81765]
+  * cpufreq: interactive: Remove the jump_to_max hack (Christopher R. Palmer) [03a4650]
+  
 11/07/2017
 
 
