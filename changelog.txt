@@ -1,6 +1,29 @@
 
 Project name: White-Wolf-OP3-PA
 
+20/07/2017
+
+  * FORCE FAST CHARGE: allow max 2500ma draw from normal charger! (Dorimanx) [72645b3]
+  * qcom-cpufreq: Fix CPUs getting stuck at min freq when coming online (Sultanxda) [2b382ff]
+  * s1302, s3302: make TPD_DEBUG a compile-time decision (Park Ju Hyung) [7007dd2]
+  * pwm: treat double free as a debug message (Park Ju Hyung) [d6e02b3]
+  * lmk: add inline keywords to in-loop functions (Park Ju Hyung) [3e8c163]
+  * lmk: add static keywords to locally used variables (Park Ju Hyung) [1fba42a]
+  * cpufreq: adjust govs for my needs (Slawek) [b895d00]
+  * PM / sleep: Handle failures in device_suspend_late() consistently (Rafael J. Wysocki) [2999e84]
+  * PM / Runtime: Fix error path in pm_runtime_force_resume() (Ulf Hansson) [ceaf780]
+  * net: 8021q: Fix one possible panic caused by BUG_ON in free_netdev (Gao Feng) [6f63ef8]
+  * can: Fix kernel panic at security_sock_rcv_skb (Eric Dumazet) [79c2945]
+  * power: qpnp-smbcharger: Release wakeup source on USB removal (Anirudh Ghayal) [71e2320]
+  * scsi: ufs: Fix crashes caused by uninitialized completion usage (Sultanxda) [af496be]
+  * DTS: Disable UART connector (Alex Naidis) [3fabad0]
+  * mm: compaction: Fix bad logging (Alex Naidis) [55fd92e]
+  * sched: always use blk_schedule_flush_plug in io_schedule_out (Shaohua Li) [e84e818]
+  * sched: Prevent recursion in io_schedule() (NeilBrown) [7a8c8d3]
+  * ANDROID: sdcardfs: use mount_nodev and fix a issue in sdcardfs_kill_sb (Gao Xiang) [7841bf6]
+  * qcacld-2.0: Update from LA.UM.5.5.r1-05300-8x96.0 (Alex Naidis) [acf4ade]
+  * arm64: Fix section mismatch error introduced by latest gcc update (Chris Lahaye) [5ba32b0]
+
 
 13/07/2017
 
