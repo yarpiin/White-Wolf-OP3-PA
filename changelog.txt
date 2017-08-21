@@ -1,6 +1,32 @@
 
 Project name: White-Wolf-OP3-PA
 
+21/08/2017
+
+  * wakeup: enable all wakelocks by default (Slawek) [f1820d8]
+  * state_notifier: sync with latest from shamu by @neobuddy89 (Slawek) [4403d8d]
+  * iosched_switcher: Reduce restore delay (Pranav Vashi) [becc197]
+  * iosched_switcher: Use reliable state notifier (Pranav Vashi) [91f2c77]
+  * workqueue: implicit ordered attribute should be overridable (Tejun Heo) [2442f7a]
+  * workqueue: restore WQ_UNBOUND/max_active==1 to be ordered (Tejun Heo) [a5aa11a]
+  * cpufreq: fallback to interactive if governor is not found (Nathan Chancellor) [3ab5d9a]
+  * cpufreq: conservative: Allow down_threshold to take values from 1 to 10 (Tomasz Wilczyński) [67498cf]
+  * state_notifier: Check delayed work status before cancel (Pranav Vashi) [55073cf]
+  * state_notifier: Make workqueues unbound (Pranav Vashi) [61498e3]
+  * Revert "state_notifier: Queue work on any core" (Joe Maples) [174762e]
+  * Revert "state_notifier: Reduce defer on suspend call to 1 second" (Joe Maples) [7a005b4]
+  * Revert "FORCE FAST CHARGE: allow max 2500ma draw from normal charger!" (Dorimanx) [1906ec6]
+  * Revert "BACKPORT: PM / sleep: Go direct_complete if driver has no callbacks" (Alex Naidis) [5c6680d]
+  * ANDROID: sdcardfs: Use filesystem specific hash (Daniel Rosenberg) [d202d21]
+  * Revert "sdcardfs: Merge up kernel/common android-3.18" (Alex Naidis) [e0edb15]
+  * Revert "ANDROID: sdcardfs: remove dead function open_flags_to_access_mode()" (Alex Naidis) [44c20b3]
+  * ANDROID: sdcardfs: override credential for ioctl to lower fs (Jaegeuk Kim) [ce198b5]
+  * ext4: fix overflow caused by missing cast in ext4_resize_fs() (Jerry Lee) [6331487]
+  * ext4: fix SEEK_HOLE/SEEK_DATA for blocksize < pagesize (Jan Kara) [5de595d]
+  * qcacld-2.0: Update from LA.UM.5.6.r1-05600-89xx.0 (Alex Naidis) [39903ee]
+  * msm: camera: Instead of read_lock use read_lock_irqsave. (Trishansh Bhardwaj) [bff011f]
+
+
 20/07/2017
 
   * FORCE FAST CHARGE: allow max 2500ma draw from normal charger! (Dorimanx) [72645b3]
