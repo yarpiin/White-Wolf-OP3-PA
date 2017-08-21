@@ -1,7 +1,7 @@
 /*
  * State Notifier Driver
  *
- * Copyright (c) 2013-2015, Pranav Vashi <neobuddy89@gmail.com>
+ * Copyright (c) 2013-2017, Pranav Vashi <neobuddy89@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -101,8 +101,7 @@ void state_suspend(void)
 
 	suspend_in_progress = true;
 
-	INIT_DELAYED_WORK(&suspend_work, _suspend_work);
-	queue_delayed_work_on(0, susp_wq, &suspend_work, 
+	queue_delayed_work(susp_wq, &suspend_work, 
 		msecs_to_jiffies(suspend_defer_time * 1000));
 }
 
@@ -114,7 +113,7 @@ void state_resume(void)
 	suspend_in_progress = false;
 
 	if (state_suspended)
-		queue_work_on(0, susp_wq, &resume_work);
+		queue_work(susp_wq, &resume_work);
 }
 
 static int fb_notifier_callback(struct notifier_block *self,
@@ -149,15 +148,10 @@ static int fb_notifier_callback(struct notifier_block *self,
 
 static int __init state_notifier_init(void)
 {
-	int ret;
-
-	notif.notifier_call = fb_notifier_callback;
-	ret = fb_register_client(&notif);
-	if (ret)
-		pr_err("Failed to register FB notifier callback for state notifier.\n");
-
 	susp_wq =
-	    alloc_workqueue("state_susp_wq", WQ_FREEZABLE, 0);
+	    alloc_workqueue("state_susp_wq",
+			    WQ_HIGHPRI | WQ_UNBOUND | WQ_MEM_RECLAIM, 0);
+
 	if (!susp_wq)
 		pr_err("State Notifier failed to allocate suspend workqueue\n");
 
