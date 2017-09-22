@@ -398,14 +398,15 @@ LINUXINCLUDE    := \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -fno-common \
-		   -Werror-implicit-function-declaration \
-		   -Wno-format-security \
-		   -std=gnu89 \
-		   -mcpu=cortex-a57 -mtune=cortex-a57 \
-		   -Wno-memset-transposed-args -Wno-bool-compare -Wno-logical-not-parentheses -Wno-discarded-array-qualifiers \
-		   -Wno-unused-const-variable -Wno-array-bounds -Wno-incompatible-pointer-types -Wno-misleading-indentation -Wno-tautological-compare -Wno-error=misleading-indentation
+KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -Wno-misleading-indentation \
+		   -fno-strict-aliasing -fno-common -Wno-incompatible-pointer-types \
+		   -Werror-implicit-function-declaration -Wno-unused-const-variable \
+		   -Wno-array-bounds -Wno-maybe-uninitialized \
+		   -Wno-format-security -Wno-discarded-array-qualifiers -Wno-memset-transposed-args \
+		   -Wno-bool-compare -Wno-logical-not-parentheses -Wno-switch-bool -Wno-tautological-compare \
+		   -std=gnu89 -std=gnu89 -Wno-format-truncation -Wno-bool-operation -Wno-duplicate-decl-specifier \
+		   -Wno-memset-elt-size -Wno-parentheses -Wno-format-overflow -Wno-int-in-bool-context \
+		   -Wno-switch-unreachable \
 
 # Optimization for Kryo
 KBUILD_CFLAGS	+= -mcpu=cortex-a57+crc+crypto
