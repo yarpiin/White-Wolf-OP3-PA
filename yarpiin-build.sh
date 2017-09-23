@@ -20,12 +20,12 @@ TOOLCHAIN_DIR="/home/slawek/Android/Toolchains"
 
 # Kernel Details
 BASE_YARPIIN_VER="WHITE.WOLF.OP3.PA"
-VER=".007"
+VER=".008"
 YARPIIN_VER="$BASE_YARPIIN_VER$VER"
 
 # Vars
 export LOCALVERSION=-`echo $YARPIIN_VER`
-export CROSS_COMPILE="$TOOLCHAIN_DIR/aarch64-linux-android-6.x/bin/aarch64-linux-android-"
+export CROSS_COMPILE="$TOOLCHAIN_DIR/aarch64-linux-android-7.x/bin/aarch64-linux-android-"
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=yarpiin
