@@ -1,6 +1,44 @@
 
 Project name: White-Wolf-OP3-PA
 
+17/10/2017
+
+  * video: mdss: LiveDisplay driver (Steve Kondik) [990002b]
+  * Linux 3.18.75 (Greg Kroah-Hartman) [ae75cf3]
+  * ext4: fix fencepost in s_first_meta_bg validation (Theodore Ts'o) [4b9fa1a]
+  * ext4: validate s_first_meta_bg at mount time (Eryu Guan) [ebae8fc]
+  * ext4: Don't clear SGID when inheriting ACLs (Jan Kara) [0fe9018]
+  * ext4: fix data corruption for mmap writes (Jan Kara) [99ee8a7]
+  * fs/super.c: fix race between freeze_super() and thaw_super() (Oleg Nesterov) [33a34c8]
+  * ext4: only call ext4_truncate when size <= isize (Josef Bacik) [250edf6]
+  * drm/i915/bios: ignore HDMI on port A (Jani Nikula) [c43fb06]
+  * HID: i2c-hid: allocate hid buffers for real worst case (Adrian Salido) [72310dc]
+  * driver core: platform: Don't read past the end of "driver_override" buffer (Nicolai Stange) [df21f93]
+  * ALSA: usx2y: Suppress kernel warning at page allocation failures (Takashi Iwai) [2569d52]
+  * lsm: fix smack_inode_removexattr and xattr_getsecurity memleak (Casey Schaufler) [aac676c]
+  * uwb: ensure that endpoint is interrupt (Andrey Konovalov) [9d0c7e3]
+  * uwb: properly check kthread_run return value (Andrey Konovalov) [ecc4ee6]
+  * iio: adc: mcp320x: Fix oops on module unload (Lukas Wunner) [3e36b1e]
+  * iio: ad7793: Fix the serial interface reset (Dragos Bogdan) [8df5233]
+  * iio: core: Return error for failed read_reg (Matt Fornero) [d529ed1]
+  * staging: iio: ad7192: Fix - use the dedicated reset function avoiding dma from stack. (Stefan Popa) [fc57355]
+  * iio: ad_sigma_delta: Implement a dedicated reset function (Dragos Bogdan) [94c6acc]
+  * xhci: fix finding correct bus_state structure for USB 3.1 hosts (Mathias Nyman) [c447145]
+  * USB: fix out-of-bounds in usb_set_configuration (Greg Kroah-Hartman) [c0a4120]
+  * usb: Increase quirk delay for USB devices (Dmitry Fleytman) [bf5cf37]
+  * USB: uas: fix bug in handling of alternate settings (Alan Stern) [dd5bab4]
+  * USB: devio: Don't corrupt user memory (Dan Carpenter) [a12cb69]
+  * USB: dummy-hcd: fix infinite-loop resubmission bug (Alan Stern) [4896630]
+  * USB: dummy-hcd: fix connection failures (wrong speed) (Alan Stern) [10233c7]
+  * usb: pci-quirks.c: Corrected timeout values used in handshake (Jim Dickerson) [94335b0]
+  * ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor (Takashi Iwai) [6c76ba8]
+  * usb: renesas_usbhs: fix usbhsf_fifo_clear() for RX direction (Yoshihiro Shimoda) [7be59ff]
+  * usb: renesas_usbhs: fix the BCLR setting condition for non-DCP pipe (Yoshihiro Shimoda) [a5f5b1e]
+  * usb-storage: unusual_devs entry to fix write-access regression for Seagate external drives (Alan Stern) [980c2f7]
+  * USB: gadgetfs: fix copy_to_user while holding spinlock (Alan Stern) [df93a88]
+  * USB: gadgetfs: Fix crash caused by inadequate synchronization (Alan Stern) [ffc9cb0]
+  * usb: gadget: inode.c: fix unbalanced spin_lock in ep0_write (David Eccher) [b97cb98]
+
 8/10/2017
 
   * Linux 3.18.74 (Greg Kroah-Hartman) [9064305]
