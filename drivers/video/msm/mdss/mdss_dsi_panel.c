@@ -26,6 +26,7 @@
 
 #include "mdss_dsi.h"
 #include "mdss_dba_utils.h"
+#include "mdss_livedisplay.h"
 
 #ifdef CONFIG_POWERSUSPEND
 #include <linux/powersuspend.h>
@@ -171,7 +172,7 @@ int mdss_dsi_panel_cmd_read(struct mdss_dsi_ctrl_pdata *ctrl, char cmd0,
 	return mdss_dsi_cmdlist_put(ctrl, &cmdreq);
 }
 
-static void mdss_dsi_panel_cmds_send(struct mdss_dsi_ctrl_pdata *ctrl,
+void mdss_dsi_panel_cmds_send(struct mdss_dsi_ctrl_pdata *ctrl,
 			struct dsi_panel_cmds *pcmds, u32 flags)
 {
 	struct dcs_cmd_req cmdreq;
@@ -229,24 +230,6 @@ static void mdss_dsi_panel_bklt_dcs(struct mdss_dsi_ctrl_pdata *ctrl, int level)
 	cmdreq.cb = NULL;
 
 	mdss_dsi_cmdlist_put(ctrl, &cmdreq);
-}
-
-int mdss_dsi_panel_update_srgb_mode(struct mdss_dsi_ctrl_pdata *ctrl)
-{
-	if (!ctrl->srgb_on_cmds.cmd_cnt) {
-		printk("%s: this panel doesn't support sRGB!\n", __func__);
-		return -1;
-	}
-
-	if (ctrl->srgb_enabled) {
-		mdss_dsi_panel_cmds_send(ctrl, &ctrl->srgb_on_cmds, CMD_REQ_COMMIT);
-		pr_err("%s: sRGB mode enabled\n", __func__);
-	} else {
-		mdss_dsi_panel_cmds_send(ctrl, &ctrl->srgb_off_cmds, CMD_REQ_COMMIT);
-		pr_err("%s: sRGB mode disabled\n", __func__);
-	}
-
-	return 0;
 }
 
 static int mdss_dsi_request_gpios(struct mdss_dsi_ctrl_pdata *ctrl_pdata)
@@ -837,8 +820,9 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 	if (ctrl->ds_registered)
 		mdss_dba_utils_video_on(pinfo->dba_data, pinfo);
 
-	if (ctrl->srgb_enabled)
-		mdss_dsi_panel_update_srgb_mode(ctrl);
+	if (pdata->event_handler)
+		pdata->event_handler(pdata, MDSS_EVENT_UPDATE_LIVEDISPLAY,
+				(void *)(unsigned long) MODE_UPDATE_ALL);
 
 end:
 	pr_debug("%s:-\n", __func__);
@@ -968,7 +952,7 @@ static void mdss_dsi_parse_trigger(struct device_node *np, char *trigger,
 }
 
 
-static int mdss_dsi_parse_dcs_cmds(struct device_node *np,
+int mdss_dsi_parse_dcs_cmds(struct device_node *np,
 		struct dsi_panel_cmds *pcmds, char *cmd_key, char *link_key)
 {
 	const char *data;
@@ -2627,14 +2611,6 @@ static int mdss_panel_parse_dt(struct device_node *np,
 	if (rc)
 		return rc;
 
-	mdss_dsi_parse_dcs_cmds(np, &ctrl_pdata->srgb_on_cmds,
-		"qcom,mdss-dsi-panel-srgb-on-command",
-		"qcom,mdss-dsi-srgb-command-state");
-
-	mdss_dsi_parse_dcs_cmds(np, &ctrl_pdata->srgb_off_cmds,
-		"qcom,mdss-dsi-panel-srgb-off-command",
-		"qcom,mdss-dsi-srgb-command-state");
-
 	pinfo->mipi.rx_eot_ignore = of_property_read_bool(np,
 		"qcom,mdss-dsi-rx-eot-ignore");
 	pinfo->mipi.tx_eot_append = of_property_read_bool(np,
@@ -2707,6 +2683,8 @@ static int mdss_panel_parse_dt(struct device_node *np,
 		strlcpy(ctrl_pdata->bridge_name, bridge_chip_name,
 			MSM_DBA_CHIP_NAME_MAX_LEN);
 	}
+
+	mdss_livedisplay_parse_dt(np, pinfo);
 
 	return 0;
 
