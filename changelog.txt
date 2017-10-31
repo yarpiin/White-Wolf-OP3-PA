@@ -1,6 +1,12 @@
 
 Project name: White-Wolf-OP3-PA
 
+31/10/2017
+
+  * Merge remote-tracking branch 'PA/nougat-mr2' into nougat-mr2
+  * cpufreq: corect name for Smartmax (Slawek) [ce07b8e]
+  * cpufreq: Smartmax EPS add missing lines (Slawek) [5e60607]
+
 27/10/2017
 
   * cpufreq: add Smartmax EPS gov by maxwen and fix compiling (Slawek) [4d13e7d]
