@@ -164,11 +164,11 @@ config CPU_FREQ_DEFAULT_GOV_ELECTRON
 	  loading your cpufreq low-level hardware driver, using the
 	  'electron' governor for latency-sensitive workloads.
 
-config CPU_FREQ_DEFAULT_GOV_SMARTMAX_EPS 
+config CPU_FREQ_DEFAULT_GOV_SMARTMAX
         bool "smartmax_eps" 
-        select CPU_FREQ_GOV_SMARTMAX_EPS 
+        select CPU_FREQ_GOV_SMARTMAX
         help 
-          Use the CPUFreq governor 'smartmax eps' as default 
+          Use the CPUFreq governor 'smartmax' as default 
 
 endchoice
 
@@ -305,11 +305,11 @@ config CPU_FREQ_GOV_ELECTRON
 	help
 	  'electron' - another tuned interactive with extra options
 
-config CPU_FREQ_GOV_SMARTMAX_EPS 
-    tristate "'smartmax EPS' cpufreq policy governor" 
+config CPU_FREQ_GOV_SMARTMAX
+    tristate "'smartmax' cpufreq policy governor" 
     select CPU_FREQ_TABLE 
     help 
-      'smartmax EPS' is the extreme powersaving version of smartmax 
+      'smartmax' smart ondemand based governor 
  
 config CPUFREQ_DT
 	tristate "Generic DT based cpufreq driver"
