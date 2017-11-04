@@ -1,6 +1,20 @@
 
 Project name: White-Wolf-OP3-PA
 
+04/11/2017
+
+  * Linux 3.18.79 (Greg Kroah-Hartman) [403884c]
+  * ecryptfs: fix dereference of NULL user_key_payload (Eric Biggers) [10787f2]
+  * can: kvaser_usb: Correct return value in printout (Jimmy Assarsson) [4573f8d]
+  * scsi: sg: Re-fix off by one in sg_fill_request_table() (Ben Hutchings) [965c947]
+  * scsi: zfcp: fix erp_action use-before-initialize in REC action trace (Steffen Maier) [7349e54]
+  * assoc_array: Fix a buggy node-splitting case (David Howells) [38bb9e5]
+  * Input: gtco - fix potential out-of-bound access (Dmitry Torokhov) [ae487e7]
+  * fuse: fix READDIRPLUS skipping an entry (Miklos Szeredi) [2a79e39]
+  * spi: uapi: spidev: add missing ioctl header (Baruch Siach) [ed7034c]
+  * usb: xhci: Handle error condition in xhci_stop_device() (Mayank Rana) [b794b85]
+  * ceph: unlock dangling spinlock in try_flush_caps() (Jeff Layton) [19ee432]
+
 31/10/2017
 
   * Merge remote-tracking branch 'PA/nougat-mr2' into nougat-mr2
