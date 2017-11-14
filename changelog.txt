@@ -1,6 +1,38 @@
 
 Project name: White-Wolf-OP3-PA
 
+14/11/2017
+
+  * msm: mdss: Restrict display commit thread to power cluster (Sultanxda) [b35c50c]
+  * Linux 3.18.80 (Greg Kroah-Hartman) [404fcc0c]
+  * staging: r8712u: Fix Sparse warning in rtl871x_xmit.c (Larry Finger) [00f2f58]
+  * xen: don't print error message in case of missing Xenstore entry (Juergen Gross) [369c926]
+  * bt8xx: fix memory leak (Sudip Mukherjee) [00addc6]
+  * s390/dasd: check for device error pointer within state change interrupts (Stefan Haberland) [cf82bac]
+  * staging: lustre: ptlrpc: skip lock if export failed (Alexander Boyko) [2ed1d91]
+  * staging: lustre: hsm: stack overrun in hai_dump_data_field (frank zago) [d2ddcac]
+  * platform/x86: intel_mid_thermal: Fix module autoload (Javier Martinez Canillas) [04188b3]
+  * xen/manage: correct return value check on xenbus_scanf() (Jan Beulich) [4ed7029]
+  * cx231xx: Fix I2C on Internal Master 3 Bus (Oleh Kravchenko) [56d9878]
+  * i2c: riic: correctly finish transfers (Chris Brandt) [a26ea2a]
+  * ext4: do not use stripe_width if it is not set (Jan Kara) [c69845a]
+  * ext4: fix stripe-unaligned allocations (Jan Kara) [503877b]
+  * staging: rtl8712u: Fix endian settings for structs describing network packets (Larry Finger) [deb9d90]
+  * mmc: s3cmci: include linux/interrupt.h for tasklet_struct (Arnd Bergmann) [d66f65c]
+  * x86/microcode/intel: Disable late loading on model 79 (Borislav Petkov) [074de97]
+  * drm/msm: fix an integer overflow test (Dan Carpenter) [77f135f]
+  * drm/msm: Fix potential buffer overflow issue (Kasin Li) [06e35b8]
+  * ocfs2: fstrim: Fix start offset of first cluster group during fstrim (Ashish Samant) [249e090]
+  * ARM: 8715/1: add a private asm/unaligned.h (Arnd Bergmann) [e2e5540]
+  * arm64: ensure __dump_instr() checks addr_limit (Mark Rutland) [4b6d42f]
+  * ASoC: adau17x1: Workaround for noise bug in ADC (Ricard Wanderlof) [21e5a1d]
+  * KEYS: fix out-of-bounds read during ASN.1 parsing (Eric Biggers) [17cdf94]
+  * KEYS: return full count in keyring_read() if buffer is too small (Eric Biggers) [752c31d]
+  * cifs: check MaxPathNameComponentLength != 0 before using it (Ronnie Sahlberg) [d6eebc1]
+  * ALSA: seq: Fix nested rwsem annotation for lockdep splat (Takashi Iwai) [4d8c34c]
+  * ALSA: timer: Add missing mutex lock for compat ioctls (Takashi Iwai) [9656fbb]
+  * blk-mq: fix race between timeout and freeing request (Ming Lei) [8040abe]
+
 04/11/2017
 
   * Linux 3.18.79 (Greg Kroah-Hartman) [403884c]
