@@ -1,6 +1,35 @@
 
 Project name: White-Wolf-OP3-PA
 
+11/12/2017
+
+  * Linux 3.18.87 (Greg Kroah-Hartman) [312c9f3]
+  * usb: host: fix incorrect updating of offset (Colin Ian King) [fc35ce4]
+  * USB: usbfs: Filter flags passed in from user space (Oliver Neukum) [8c4ce4e]
+  * USB: devio: Prevent integer overflow in proc_do_submiturb() (Dan Carpenter) [bf0c3bb]
+  * USB: Increase usbfs transfer limit (Mateusz Berezecki) [a684a8a]
+  * usb: hub: Cycle HUB power when initialization fails (Mike Looijmans) [1342c62]
+  * serial: 8250_pci: Add Amazon PCI serial device ID (Matt Wilson) [4c70257]
+  * usb: quirks: Add no-lpm quirk for KY-688 USB 3.1 Type-C Hub (Kai-Heng Feng) [f04986e]
+  * uas: Always apply US_FL_NO_ATA_1X quirk to Seagate devices (Hans de Goede) [c6eda43]
+  * ima: fix hash algorithm initialization (Boshi Wang) [d4ef38b]
+  * net: fec: fix multicast filtering hardware setup (Rui Sousa) [5c0bb56]
+  * mm: avoid returning VM_FAULT_RETRY from ->page_mkwrite handlers (Jan Kara) [191180a]
+  * tipc: fix cleanup at module unload (Parthasarathy Bhuvaragan) [4adaba3]
+  * net: sctp: fix array overrun read on sctp_timer_tbl (Colin Ian King) [0a6c4a2]
+  * NFSv4: Fix client recovery when server reboots multiple times (Trond Myklebust) [15769aa]
+  * net/appletalk: Fix kernel memory disclosure (Vlad Tsyrklevich) [0539f53]
+  * vti6: fix device register to report IFLA_INFO_KIND (David Forster) [ce95e7b]
+  * ARM: OMAP1: DMA: Correct the number of logical channels (Peter Ujfalusi) [fb2f9c3]
+  * perf test attr: Fix ignored test case result (Thomas Richter) [0c1f082]
+  * sysrq : fix Show Regs call trace on ARM (Jibin Xu) [632ea4c]
+  * EDAC, sb_edac: Fix missing break in switch (Gustavo A. R. Silva) [3862023]
+  * spi: sh-msiof: Fix DMA transfer size check (Hiromitsu Yamasaki) [8e733d5]
+  * serial: 8250_fintek: Fix rs485 disablement on invalid ioctl() (Lukas Wunner) [35ec950]
+  * bcache: recover data from backing when data is clean (Rui Hua) [e139dfa]
+  * bcache: only permit to recovery read error when cache device is clean (Coly Li) [6774dc0]
+  * build.sh: update paths (Slawek) [faf8303]
+
 07/12/2017
 
   * Linux 3.18.86 (Greg Kroah-Hartman) [39a769f]
