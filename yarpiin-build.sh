@@ -13,10 +13,10 @@ THREAD="-j$(grep -c ^processor /proc/cpuinfo)"
 KERNEL="Image.gz-dtb"
 DTBIMAGE="dtb"
 DEFCONFIG="yarpiin_defconfig"
-KERNEL_DIR="/home/slawek/Android/OP3/White-Wolf-OP3-PA"
+KERNEL_DIR="/home/yarpiin/Android/OP3/White-Wolf-OP3-PA"
 RESOURCE_DIR="$KERNEL_DIR/.."
-LAZYFLASHER_DIR="/home/slawek/Android/OP3/lazyflasherOP3"
-TOOLCHAIN_DIR="/home/slawek/Android/Toolchains"
+LAZYFLASHER_DIR="/home/yarpiin/Android/OP3/lazyflasherOP3"
+TOOLCHAIN_DIR="/home/yarpiin/Android/Toolchains"
 
 # Kernel Details
 BASE_YARPIIN_VER="WHITE.WOLF.OP3.PA"
@@ -35,7 +35,7 @@ export KBUILD_BUILD_HOST=kernel
 REPACK_DIR="$LAZYFLASHER_DIR"
 PATCH_DIR="$LAZYFLASHER_DIR/ramdisk-patch"
 MODULES_DIR="$LAZYFLASHER_DIR/modules"
-ZIP_MOVE="/home/slawek/Android/OP3/Zip"
+ZIP_MOVE="/home/yarpiin/Android/OP3/Zip"
 ZIMAGE_DIR="$KERNEL_DIR/arch/arm64/boot"
 
 # Functions
