@@ -331,7 +331,8 @@ static int ks8995_probe(struct spi_device *spi)
 	err = ks8995_reset(ks);
 	if (err)
 		return err;
-
+	
+	sysfs_attr_init(&ks->regs_attr.attr);
 	err = sysfs_create_bin_file(&spi->dev.kobj, &ks->regs_attr);
 	if (err) {
 		dev_err(&spi->dev, "unable to create sysfs file, err=%d\n",
