@@ -112,6 +112,9 @@ bool afs_cm_incoming_call(struct afs_call *call)
 	case CBInitCallBackState3:
 		call->type = &afs_SRXCBInitCallBackState3;
 		return true;
+	case CBProbeUuid:
+		call->type = &afs_SRXCBProbeUuid;
+		return true;
 	case CBProbe:
 		call->type = &afs_SRXCBProbe;
 		return true;
