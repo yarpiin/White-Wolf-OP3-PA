@@ -1,6 +1,47 @@
 
 Project name: White-Wolf-OP3-PA
 
+11/02/2018
+
+  * qcacld-2.0: Update to CAF LA.UM.5.5.r1-06700-8x96.0 (Slawek) [de9ed50]
+  * sched: Add other commits left out during CAF's 3.18 stable merge (ahmedradaideh) [44422cd]
+  * Linux 3.18.94 (Greg Kroah-Hartman) [65e9e03]
+  * um: Fix out-of-tree build (Richard Weinberger) [76a9c48]
+  * ASoC: pcm512x: add missing MODULE_DESCRIPTION/AUTHOR/LICENSE (Jesse Chan) [245375a]
+  * spi: imx: do not access registers while clocks disabled (Stefan Agner) [75538f1]
+  * selinux: general protection fault in sock_has_perm (Mark Salyzyn) [c397c0d]
+  * usb: uas: unconditionally bring back host after reset (Oliver Neukum) [471999b]
+  * USB: serial: simple: add Motorola Tetra driver (Johan Hovold) [e961ea7]
+  * usbip: list: don't list devices attached to vhci_hcd (Shuah Khan) [88299c6]
+  * usbip: prevent bind loops on devices attached to vhci_hcd (Shuah Khan) [849585f]
+  * USB: serial: io_edgeport: fix possible sleep-in-atomic (Jia-Ju Bai) [759170e]
+  * CDC-ACM: apply quirk for card reader (Oliver Neukum) [a3ea2c2]
+  * USB: cdc-acm: Do not log urb submission errors on disconnect (Hans de Goede) [b7f6958]
+  * USB: serial: pl2303: new device id for Chilitag (Greg Kroah-Hartman) [59963f3]
+  * staging: rtl8188eu: Fix incorrect response to SIOCGIWESSID (Larry Finger) [90cded1]
+  * usb: gadget: don't dereference g until after it has been null checked (Colin Ian King) [671443d]
+  * media: usbtv: add a new usbid (Icenowy Zheng) [29695ec]
+  * scsi: ufs: ufshcd: fix potential NULL pointer dereference in ufshcd_config_vreg (Gustavo A. R. Silva) [1adeeea]
+  * quota: Check for register_shrinker() failure. (Tetsuo Handa) [bc13564]
+  * net: ethernet: xilinx: Mark XILINX_LL_TEMAC broken on 64-bit (Geert Uytterhoeven) [e0ef551]
+  * hwmon: (pmbus) Use 64bit math for DIRECT format values (Robert Lippert) [63c9307]
+  * nfsd: check for use of the closed special stateid (Andrew Elble) [6324e96]
+  * nfsd: CLOSE SHOULD return the invalid special stateid for NFSv4.x (x>0) (Trond Myklebust) [3f61999]
+  * xen-netfront: remove warning when unloading module (Eduardo Otubo) [2892d4a]
+  * KVM: VMX: Fix rflags cache during vCPU reset (Wanpeng Li) [23e2640]
+  * mac80211: fix the update of path metric for RANN frame (Chun-Yeow Yeoh) [f895f16]
+  * bcache: check return value of register_shrinker (Michael Lyle) [0d41268]
+  * KVM: X86: Fix operand/address-size during instruction decoding (Wanpeng Li) [9a135db]
+  * KVM: x86: Don't re-execute instruction when not passing CR2 value (Liran Alon) [eec4ca8]
+  * KVM: x86: emulator: Return to user-mode on L1 CPL=0 emulation failure (Liran Alon) [fadbdae]
+  * igb: Free IRQs when device is hotplugged (Lyude Paul) [71e1a6c]
+  * gpio: iop: add missing MODULE_DESCRIPTION/AUTHOR/LICENSE (Jesse Chan) [9a5c11d]
+  * ALSA: seq: Make ioctls race-free (Takashi Iwai) [9c0a38c]
+  * loop: fix concurrent lo_open/lo_release (Linus Torvalds) [a5af28a]
+  * um: Remove copy&paste code from init.h (Richard Weinberger) [bae1ce9]
+  * um: Stop abusing __KERNEL__ (Richard Weinberger) [e6ca3de]
+  * um: link vmlinux with -no-pie (Thomas Meyer) [0567812]
+
 31/01/2018
 
   * Linux 3.18.93 (Greg Kroah-Hartman) [72b37cd]
