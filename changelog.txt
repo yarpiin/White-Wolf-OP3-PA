@@ -1,6 +1,35 @@
 
 Project name: White-Wolf-OP3-PA
 
+29/03/2018
+
+  * Linux 3.18.100 (Greg Kroah-Hartman) [99d3e91]
+  * fixup: sctp: verify size of a new chunk in _sctp_make_chunk() (Greg Kroah-Hartman) [424ce0e]
+  * serial: 8250_pci: Add Brainboxes UC-260 4 port serial device (Nikola Ciprich) [80026b8]
+  * usb: usbmon: Read text within supplied buffer size (Pete Zaitcev) [d0644e4]
+  * USB: usbmon: remove assignment from IS_ERR argument (Julia Lawall) [c9381aa]
+  * usb: quirks: add control message delay for 1b1c:1b20 (Danilo Krummrich) [e7389ef]
+  * staging: android: ashmem: Fix lockdep issue during llseek (Joel Fernandes) [b4b9f38]
+  * uas: fix comparison for error code (Oliver Neukum) [9cfb180]
+  * tty/serial: atmel: add new version check for usart (Jonas Danielsson) [65b345f]
+  * serial: sh-sci: prevent lockup on full TTY buffers (Ulrich Hecht) [bf0adb5]
+  * x86: Treat R_X86_64_PLT32 as R_X86_64_PC32 (H.J. Lu) [dc9fdd3]
+  * x86/module: Detect and skip invalid relocations (Josh Poimboeuf) [fdf3ca8]
+  * scripts: recordmcount: break hardlinks (Russell King) [31e1418]
+  * ubi: Fix race condition between ubi volume creation and udev (Clay McClure) [6690dbe]
+  * netfilter: ipv6: fix use-after-free Write in nf_nat_ipv6_manip_pkt (Florian Westphal) [a5efaa9]
+  * netfilter: bridge: ebt_among: add missing match size checks (Florian Westphal) [2e7453d]
+  * netfilter: ebtables: CONFIG_COMPAT: don't trust userland offsets (Florian Westphal) [2573da0]
+  * netfilter: IDLETIMER: be syzkaller friendly (Eric Dumazet) [6427edd]
+  * netfilter: nat: cope with negative port range (Paolo Abeni) [8f5fdce]
+  * netfilter: x_tables: fix missing timer initialization in xt_LED (Paolo Abeni) [ce6ec06]
+  * ALSA: seq: More protection for concurrent write and ioctl races (Takashi Iwai) [cb9a9b0]
+  * ALSA: seq: Don't allow resizing pool in use (Takashi Iwai) [97392a0]
+  * x86/MCE: Serialize sysfs changes (Seunghun Han) [76d5748]
+  * Input: matrix_keypad - fix race when disabling interrupts (Zhang Bo) [5f8507f]
+  * MIPS: BMIPS: Do not mask IPIs during suspend (Justin Chen) [c303810]
+  * scsi: qla2xxx: Fix NULL pointer crash due to active timer for ABTS (himanshu.madhani@cavium.com) [1883ef9]
+
 12/03/2018
 
   * cpufreq: darkness: fix compilation without state notifier (Andrzej Perczak) [7ebecc3]
